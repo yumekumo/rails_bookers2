@@ -37,6 +37,7 @@
                 <li>
                   <%= link_to " login", new_user_session_path, class: "fas fa-sign-in-alt nav-link text-light" %>
                 </li>
+                
               <% else %>
                 <li>
                   <%= link_to " Home", user_path(current_user.id), class: "fas fa-home nav-link text-light" %>
