@@ -22,6 +22,8 @@
               </td>
               <td><%= link_to @book.title, @book %></td>
               <td><%= @book.body %></td>
+              
+              <%= render 'favorites/heart', book: @book %>
 
               <% if @book.user == current_user %>
                 <td>
@@ -30,6 +32,7 @@
                 <td>
                   <%= link_to "Destroy", book_path(@book), method: :delete, "data-confirm" => "本当に消しますか？", class: "btn btn-sm btn-danger edit_book_#{@book.id}" %>
                 </td>
+                
               <% end %>
             </tr>
           </tbody>
